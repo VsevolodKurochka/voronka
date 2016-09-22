@@ -29,7 +29,10 @@
           width: 71px;
           height: 21px;
           margin-top: -10.5px;
+          animation: list-big-arrow 10s ease-in-out infinite alternate;
+          @include transform(translateX(0));
           @include bg("../img/arrow.png");
+
         }
       }
     }
@@ -85,4 +88,32 @@
       }
     }
   } 
+}
+@-webkit-keyframes list-big-arrow{
+  0%,
+  100%{
+    @include transform(translateX(0));
+  }
+  20%,
+  60%{
+    @include transform(translateX(15px));
+  }
+  40%,
+  80%{
+    @include transform(translateX(5px));
+  }    
+}
+@keyframes list-big-arrow{
+  0%,
+  100%{
+    @include transform(translateX(0));
+  }
+  20%,
+  60%{
+    @include transform(translateX(15px));
+  }
+  40%,
+  80%{
+    @include transform(translateX(5px));
+  }  
 }

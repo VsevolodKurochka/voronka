@@ -1026,7 +1026,7 @@ End:  HEADER
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 .btn-effect-1:hover:before {
-  height: calc(450% - 40px);
+  height: calc(450% - 90px);
   opacity: 1;
 }
 .btn-corp {
@@ -1035,6 +1035,12 @@ End:  HEADER
   -webkit-box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.25);
+}
+.btn-corp:hover {
+  color: #000;
+}
+.btn-corp:before {
+  background-color: #b8c7e8;
 }
 @media (min-width: 768px) {
   .btn-single {
@@ -1068,6 +1074,11 @@ End:  HEADER
   width: 71px;
   height: 21px;
   margin-top: -10.5px;
+  animation: list-big-arrow 10s ease-in-out infinite alternate;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
   background: url("../img/arrow.png") 0 0 no-repeat;
   background-size: cover;
 }
@@ -1127,6 +1138,52 @@ End:  HEADER
   }
 }
 
+@-webkit-keyframes list-big-arrow {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+@keyframes list-big-arrow {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
 .corp, .text-number, .step-number, .progress-c-text-header {
   color: #3861bc;
 }
@@ -1532,7 +1589,7 @@ End:  HEADER
 }
 
 .progress-c {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 .progress-c:last-child {
   margin-bottom: 0;
@@ -1580,7 +1637,7 @@ End:  HEADER
   .progress-c:nth-child(even) .progress-c-image {
     left: 71.5%;
   }
-  .progress-c-body .inner {
+  .progress-c-text-body .inner {
     width: 300px;
     float: left;
   }

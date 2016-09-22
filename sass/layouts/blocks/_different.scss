@@ -409,7 +409,7 @@
 }
 .progress{
   &-c{
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     &:last-child{
       margin-bottom: 0;
     }
@@ -467,7 +467,7 @@
           left: 71.5%;
         }
       }
-      &-body{
+      &-text-body{
         .inner{
           width: 300px;
           float: left;
