@@ -38,12 +38,15 @@
         &:nth-child(#{$i}){
           padding-left: 7.5px * $i;
         }
-        @include resp-min(sm){
+      }
+    }
+    @include resp-min(sm){
+      @for $i from 2 through 4{
+        li{
           &:nth-child(#{$i}){
             padding-left: 15px * $i;
           }
         }
-        
       }
     }
   }

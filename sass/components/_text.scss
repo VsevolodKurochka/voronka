@@ -1,5 +1,5 @@
 $bigtitle: (
-  exs:  24px,
+  exs:  28px,
   xs:   40px,
   md:   60px
 );
@@ -14,6 +14,16 @@ $h3-font-sizes: (
   sm:   29px,
   md:   40px
 );
+$subtitle: (
+  exs: 24px,
+  sm:  30px
+);
+$subtitle-small: (
+  exs: 21px,
+  sm:  36px
+);
+
+
 %fwlight{
   font-weight: 100;
 }
@@ -21,15 +31,6 @@ $h3-font-sizes: (
   h#{$i},
   .h#{$i}{
     @extend %fwlight;
-  }
-}
-.bigtitle{
-  @include font-size($bigtitle);
-  @include resp-min(md){
-    line-height: 62px;
-    &-big-lh{
-      line-height: 77px;
-    }
   }
 }
 .h1{
@@ -65,7 +66,7 @@ $h3-font-sizes: (
       margin-bottom: 50px;
     }
     &.b-m{
-      margin-bottom: 70px;
+      margin-bottom: 80px;
     }
   }
 }
@@ -78,6 +79,31 @@ $h3-font-sizes: (
     &3{
       margin-bottom: 30px;
     }
+  }
+}
+.bigtitle{
+  @include font-size($bigtitle);
+  @include resp-min(sm){
+    &-inner{
+      display: block;
+      font-size: 40px;
+    }
+  }
+  @include resp-min(md){
+    line-height: 62px;
+    &-big-lh{
+      line-height: 77px;
+    }
+  }
+}
+.subtitle{
+  @include font-size($subtitle);
+  margin-bottom: 35px;
+}
+.subtitle-small{
+  @include font-size($subtitle-small);
+  @include resp-min(sm){
+    line-height: 36px;
   }
 }
 .text{
@@ -94,8 +120,10 @@ $h3-font-sizes: (
     }
   }
   &-number{
-    display: inline-block;
+    @extend .bold;
     position: relative;
+    @extend .block-inline;
+    @extend .corp;
     min-width: 27px;
     &:after{
       @extend .pseudo;
@@ -106,6 +134,19 @@ $h3-font-sizes: (
       background-color: #d9deef;
     } 
   }
+}
+.number-absolute{
+  p{
+    padding-left: 20px;
+    margin-bottom: 17px;
+  }
+  .text-number{
+    position: absolute;
+    left: 0;
+  }
+}
+.italic{
+  font-style: italic;
 }
 .t{
   &tu{
